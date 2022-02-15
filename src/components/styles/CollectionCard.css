@@ -1,0 +1,56 @@
+.collection_card{
+  cursor: pointer;
+  float: left;
+  width: 20%;
+  height: 350px;
+  padding: 5px 10px 5px 10px;
+  margin: 0 10px 5px 10px;
+  background-color: #1b1a21;
+  border-radius: 10px;
+
+}
+
+.collection_card:hover{
+  transform: scale(1.06);
+  transition: 0.4s ease-in-out;
+}
+.collection_card:not(:hover){
+  transition: 0.4s ease-in-out;
+}
+
+.collection_top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile_pic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:-50px;
+}
+.collection_banner>img{
+  border-radius: 10px;
+  height:200px;
+  width: 100%;
+}
+.profile_pic>img{
+  border: 6px solid var(--color-bg);
+  border-radius: 50%;
+  width: 50%;
+}
+
+.collection_name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:whitesmoke;
+  margin-top: 50px;
+}
+
+.collection_disc{
+  color:whitesmoke;
+  padding-top:5px;
+
+}

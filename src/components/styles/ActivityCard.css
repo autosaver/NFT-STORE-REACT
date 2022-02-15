@@ -1,0 +1,40 @@
+.card_type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color:whitesmoke;
+}
+
+.card_item{
+    display: flex;
+    align-items: center;
+    flex-basis:25%;
+    padding: 5px;
+
+    color:whitesmoke;
+}
+
+.card_item>img{
+    height:35px;
+    width:35px;
+    margin-right: 15px;
+}
+
+.card_price{
+    color:whitesmoke;
+    flex: 1;
+}
+.card_quantity{
+    color:whitesmoke;
+    flex: 1;
+}
+
+.userinfo{
+    color:rgb(88, 173, 212);
+    flex: 1;
+}
+.card_timestamp{
+    color:whitesmoke;
+    flex: 1;
+}

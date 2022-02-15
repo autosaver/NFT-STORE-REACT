@@ -12,8 +12,6 @@ const Navbar = () => {
         setUser(false);
     }
     const handleLogin = () => {
-
-        console.log("Logged IN");
         setUser(true);
     }
 
@@ -36,6 +34,7 @@ const Navbar = () => {
                     />
                     <Link to="/explore"><p>Explore</p> </Link>
                     <Link to="/collections"><p>Collections</p> </Link>
+                    <Link to="/activity"><p>Activity</p> </Link>
 
                    {user && <div className="navbar-sign">
                         <Link to="/create">
@@ -47,7 +46,8 @@ const Navbar = () => {
             <div className="navbar-sign">
                 {user ? (
                     <>
-                        <button type='button' className='secondary-btn'>Connect</button>
+                        <p>Balance: 0 Rs</p>
+                        <button type='button' className='secondary-btn'>Wallet</button>
                         {user && <Link to="/"><p onClick={handleLogout}>Logout</p></Link>}
                     </>
                 ) : (
