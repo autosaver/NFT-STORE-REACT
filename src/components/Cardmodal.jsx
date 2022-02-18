@@ -14,13 +14,13 @@ function Cardmodal({ asset, setModal }) {
         <div className='item section__padding'>
           <div className="item-image">
             <img src={asset.image_url || asset?.image_thumbnail_url || asset?.image_preview_url} alt="item" />
-            
+
             <div className="trait_carasaul">
-              
+
               {asset?.traits.map((trait) => <div className="trait_card" key={trait?.trait_type}>
                 <strong>{trait?.trait_type}</strong>
                 <p>{trait?.value}</p>
-                </div>
+              </div>
               )}
             </div>
 

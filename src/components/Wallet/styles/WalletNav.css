@@ -1,0 +1,42 @@
+.wallet_nav{
+    width: 25vw;
+    height: 100vh;
+    background-color: rgba(20, 21, 22);
+
+    position: fixed;
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+
+    color:whitesmoke;
+    right:0px;
+    
+}
+
+.wallet_details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width:100%;
+    margin-top: 5%;
+}
+
+.amount_input{
+    margin-top: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.amount_input>input{
+    background-color:rgb(37, 39, 41) ;
+    color:whitesmoke;
+    border: none;
+    height:2rem;
+    width: 100%;
+    border-radius: 10px;
+
+    
+}

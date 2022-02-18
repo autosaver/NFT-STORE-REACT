@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+
     margin: 0 1rem 0 1rem;
     border-bottom: 1px solid rgba(165, 165, 165, 0.1);
   }
@@ -77,8 +79,10 @@
     border-radius: 10px;
   }
   
-  .navbar-sign button,
-  .navbar-menu_container button{
+  .navbar-sign button{
+    display: flex;
+    align-items: center;
+
     color: #fff;
     padding: 0.5rem 1rem;
     font-family: var(--font-family);

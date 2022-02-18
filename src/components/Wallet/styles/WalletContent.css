@@ -1,0 +1,42 @@
+.wallet_content{
+    display:flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.wallet_balance{
+
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: 600;
+    display:flex;
+    align-items: center;
+    justify-items: center;
+
+
+}
+.wallet_control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+
+}
+.primary-btn
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    border: none;
+    font-size: 16px;
+    background: var(--primary-btn);
+    border-radius: 10px;
+    margin:3px;
+}

@@ -11,9 +11,9 @@ import Collections from './components/Collections';
 import SupportAvatar from './components/SupportFiles/SupportAvatar';
 import Activity from './components/Activity';
 
-import { assets } from './components/data.js'
-import { collection_assets } from './components/Collection_data.js'
-import {activity_data} from './components/activity_data';
+import { assets } from './components/Test_Data/data.js'
+import { collection_assets } from './components/Test_Data/Collection_data'
+import {activity_data} from './components/Test_Data/activity_data';
 
 function UserLogin() {
     return (
