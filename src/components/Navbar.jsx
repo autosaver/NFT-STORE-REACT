@@ -13,40 +13,41 @@ import jwtDecode from 'jwt-decode';
 
 import WalletNav from './Wallet/WalletNav';
 
+import { login_action } from '../Redux/actions/Login_action';
+import { useDispatch, useSelector } from 'react-redux';
+
 
 
 const Navbar = () => {
+    const dispatch = useDispatch();
+
     const [Search, setSearch] = useState("");
-
-    const [user, setUser] = useState(localStorage.getItem('token'));
-    const [Login, setLogin] = useState(false);
-
+    const [loginCard, setloginCard] = useState(false)
     const [walletNav,setWalletNav]=useState(false);
+
+
+    const Login = useSelector(state => state.isLogged);
+    const user = useSelector(state => state.user);
+    const wallet = useSelector(state => state.wallet);
 
     useEffect(() => {
       const token=localStorage.getItem('token');
       if(token){
         const loggedUser=jwtDecode(token);
         if(loggedUser)
-            setUser(loggedUser);
+            dispatch(login_action());
         else
             localStorage.removeItem('token');
       }
-    }, [Login])
+    }, [dispatch]);
     
 
     const handleLogout = () => {
         localStorage.removeItem('token');
-        setUser(false);
-        setLogin(false);
+        dispatch(login_action());
+        setWalletNav(false);
     }
-    const handleLogin = () => {
-        setLogin(true);
-    }
-    const openWallet = () =>{
-        setWalletNav(true);
-    }
-
+    
     return (
         <>
         <div className='navbar'>
@@ -69,7 +70,7 @@ const Navbar = () => {
                     <Link to="/collections"><p>Collections</p> </Link>
                     <Link to="/activity"><p>Activity</p> </Link>
 
-                   {user && <div className="navbar-sign">
+                   {Login && <div className="navbar-sign">
                         <Link to="/create">
                             <button type='button' className='primary-btn' >Create</button>
                         </Link>
@@ -77,19 +78,23 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="navbar-sign">
-                {user ? (
+                {Login ? (
                     <>
-                        <button type='button' className='secondary-btn' onClick={openWallet}><AccountBalanceWalletIcon/> 543.21 <CurrencyRupeeIcon fontSize="small"/></button>
+                        <button type='button' className='secondary-btn' onClick={() =>setWalletNav(!walletNav)}>
+                            <AccountBalanceWalletIcon/> {wallet?.balance} <CurrencyRupeeIcon fontSize="small"/>
+                        </button>
                         <Link to="/"><p onClick={handleLogout}><LogoutIcon/></p></Link>
                     </>
                 ) : (
-                    <button type='button' className='primary-btn' onClick={handleLogin} ><LoginIcon/></button>
+                    <button type='button' className='primary-btn' onClick={() =>setloginCard(true)}>
+                        <LoginIcon/>
+                    </button>
                 )}
             </div>
 
         </div>
-        {Login &&  <UserLogin setLogin={setLogin}/>}
-        {walletNav && <WalletNav/>}
+        {loginCard &&  <UserLogin setloginCard={setloginCard}/>}
+        {walletNav && <WalletNav wallet={{...wallet,email:user.email}} />}
         </>
     )
 }

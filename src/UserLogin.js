@@ -22,7 +22,7 @@ function UserLogin() {
             <Routes>
                 <Route exact path="/" element={<Home assets={assets} collection_assets={collection_assets} />}></Route>
                 <Route exact path="/explore" element={<Explore assets={assets} />}></Route>
-                <Route exact path="/collections" element={<Collections is_collection assets={collection_assets} />}></Route>
+                <Route exact path="/collections" element={<Collections is_collection counter={100} />}></Route>
                 <Route exact path="/activity" element={<Activity activity_data={activity_data}/>}></Route>
             </Routes>
             <SupportAvatar style={{ position: 'fixed', bottom: '24px', right: '24px' }} />

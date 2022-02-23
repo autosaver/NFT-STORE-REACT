@@ -12,7 +12,7 @@ function CollectionCard({ asset }) {
                     <img src={asset?.banner_image_url} alt="banner" />
                 </div>
                 <div className="profile_pic">
-                    <img src={asset.image_url} alt="profile" />
+                    <img src={asset?.image_url} alt="profile" />
                 </div>
             </div>
             <div className="collection_data">
@@ -20,7 +20,7 @@ function CollectionCard({ asset }) {
                     <strong>{asset.name}</strong>
                 </div>
                 <div className="collection_disc">
-                    {asset.description.slice(0,80)}...
+                    {asset?.description.slice(0,50) || asset?.name}...
                 </div>
             </div>
         </div>

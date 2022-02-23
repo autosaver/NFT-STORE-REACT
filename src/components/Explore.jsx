@@ -12,7 +12,7 @@ function Explore({ assets }) {
     <div className="explore">
       <Banner hero={hero}/>
       <div className="explore_collections">
-        <Collections assets={assets}/>
+        <Collections cards_assets={assets}/>
       </div>
     </div>
 

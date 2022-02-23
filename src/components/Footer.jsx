@@ -6,7 +6,7 @@ import './styles/Footer.css'
 
 function Footer() {
     return (
-        <div className='footer section__padding'>
+        <div className='footer'>
             <div className="footer-links">
                 <div className="footer-links_logo">
                     <div>
@@ -30,14 +30,9 @@ function Footer() {
             </div>
             <div className="footer-copyright">
                 <div>
-                    <p> © {(new Date().getFullYear())} CrpytoKet, Inc. All Rights Reserved</p>
+                    <p> © {(new Date().getFullYear())} Art Collector, Inc. All Rights Reserved</p>
                 </div>
-                {/* <div>
-          <AiOutlineInstagram size={25} color='white' className='footer-icon' />
-          <AiOutlineTwitter size={25} color='white' className='footer-icon'/>
-          <RiDiscordFill size={25} color='white' className='footer-icon'/>
-          <FaTelegramPlane size={25} color='white'  className='footer-icon' />
-        </div> */}
+                
 
             </div>
         </div>

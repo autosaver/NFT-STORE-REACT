@@ -2,7 +2,7 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 12rem 1rem 12rem;
+    padding: 1rem 10rem 1rem 10rem;
     margin: 3rem 10rem 3rem 10rem;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,98,121,1) 56%, rgba(0,212,255,1) 100%);
@@ -19,7 +19,10 @@
 }
 
 .hero_data{
+    flex:1;
     color: whitesmoke;
+    font-size: 1.3vw;
+    font-weight: 600;
 }
 .hero_buttons{
     display: flex;
@@ -38,8 +41,16 @@
     /* margin: 2px; */
 }
 
+.hero_img{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex:1;
+}
 
 .hero_img>img{
-    width:23rem;
-    height:23rem;
+    max-width: 80%; 
+    display: block; 
+    height: auto;
+    
 }

@@ -7,16 +7,10 @@ import WalletDetails from './WalletDetails';
 import WithdrawFunds from './WithdrawFunds';
 
 
-
-function WalletNav() {
-
-  const [type, setType] = useState(0)
-
-  const wallet={
-    email:"adityasingh@gmail.com",
-    balance:"543.21",
-    transactions:[{id:"1"},{id:"2"},{id:"3"}],
-  }
+function WalletNav({wallet}) {
+ 
+  const [type, setType] = useState(0);
+  
   return (
     <>
     <div className="wallet_nav">

@@ -12,6 +12,8 @@
     background: var(--color-footer);
     border-top: 1px solid rgba(165, 165, 165, 0.1);
     
+    padding-top: 2rem;
+    margin-top: 2rem;
   }
   
 
@@ -107,7 +109,7 @@
     display: flex;
     justify-content: space-around;
     border-top: 1px solid rgba(165, 165, 165, 0.1);
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
   .footer-copyright p{
     font-family: var(--font-family);

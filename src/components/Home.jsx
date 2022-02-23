@@ -8,7 +8,7 @@ import './styles/Home.css';
 function Home({assets, collection_assets}) {
 
 
-  const title="Discover, collect, and sell extraordinary NFTs. ArtCollector is the India's first and largest NFT marketplace";
+  const title="Discover, collect, and sell extraordinary NFTs.";
 
   return (
     <>
@@ -17,10 +17,10 @@ function Home({assets, collection_assets}) {
             <Banner title={title}/>
         </div>
         <div className="home_hot_seller">
-            <Collections assets={assets.slice(0,5)}/>
+            <Collections cards_assets={assets.slice(0,8)}/>
         </div>
         <div className="home_top_collection">
-            <Collections is_collection assets={collection_assets.slice(0,5)}/>
+            <Collections is_collection counter={8}/>
         </div>
         <div className="home_footer">
           <Footer/>

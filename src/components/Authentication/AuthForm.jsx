@@ -6,8 +6,11 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { useDispatch } from 'react-redux';
+import { login_action } from '../../Redux/actions/Login_action';
 
-function AuthForm({setLogin}) {
+function AuthForm({setloginCard}) {
+    const dispatch = useDispatch();
 
     const [isSignup, setisSignup] = useState(false)
 
@@ -35,11 +38,11 @@ function AuthForm({setLogin}) {
         
         if(resdata.status){
             localStorage.setItem('token',resdata.token);
-            setLogin(false);
+            dispatch(login_action());
+            setloginCard(false);
         }
         else{
             alert(resdata.message);
-            
         }
     }
     return (
